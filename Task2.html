@@ -22,11 +22,14 @@
     <script>
         
         function showMessage() {
-            const messageDiv = document.getElementsById('massage');
-            messageDiv.textContent = 'This is change Text';
-        }
-        setTimeout(showMessage, 2000);
+            const messageDiv = document.getElementById('container')
+            // messageDiv.textContent = 'This is change Text';
+            messageDiv.setTimeout(()=> {
+                'time up';
+            },2000);
 
+        }
+        
         // Change the text color of the element every 2 seconds
         const colors = ['red', 'green', 'blue', 'orange', 'purple'];
         let colorIndex = 0;
@@ -34,6 +37,8 @@
             container.style.color = colors[colorIndex];
             colorIndex = (colorIndex + 1) % colors.length;
         }, 2000);
+
+        setTimeout(showMessage, 2000);
     </script>
 </body>
 </html>
